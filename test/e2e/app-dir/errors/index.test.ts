@@ -8,7 +8,12 @@ import stripAnsi from 'strip-ansi'
  */
 function normalizeComponentStack(stack: string): string[] {
   // Match "at ComponentName" patterns, optionally with [Server] tag
-  return stack.match(/at \w+(?:\s+\[Server\])?/g) || []
+  return (stack.match(/at \w+(?:\s+\[Server\])?/g) || []).map((component) =>
+    component.replace(
+      'InnerScrollAndFocusHandlerOld',
+      'InnerScrollAndFocusHandler'
+    )
+  )
 }
 
 describe('app-dir - errors', () => {

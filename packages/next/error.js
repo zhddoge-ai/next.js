@@ -9,4 +9,8 @@ try {
   errorModule = {}
 }
 
-module.exports = errorModule
+const ErrorComponent = errorModule.default || errorModule
+
+module.exports = ErrorComponent
+Object.assign(module.exports, errorModule)
+module.exports.default = ErrorComponent
