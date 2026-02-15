@@ -1,0 +1,45 @@
+/*
+ * Dark Mode Styles for Next.js
+ * Author: zhddoge-ai
+ */
+
+:root {
+  --dark-bg-primary: #0d1117;
+  --dark-bg-secondary: #161b22;
+  --dark-text-primary: #c9d1d9;
+  --dark-text-secondary: #8b949e;
+  --dark-border: #30363d;
+  --dark-accent: #58a6ff;
+}
+
+.dark {
+  background-color: var(--dark-bg-primary);
+  color: var(--dark-text-primary);
+}
+
+.dark body {
+  background-color: var(--dark-bg-primary);
+  color: var(--dark-text-primary);
+}
+
+.dark a {
+  color: var(--dark-accent);
+}
+
+.dark button {
+  background-color: var(--dark-bg-secondary);
+  color: var(--dark-text-primary);
+  border: 1px solid var(--dark-border);
+}
+
+.dark input,
+.dark textarea {
+  background-color: var(--dark-bg-secondary);
+  color: var(--dark-text-primary);
+  border: 1px solid var(--dark-border);
+}
+
+/* Smooth transitions */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
